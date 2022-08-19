@@ -6,33 +6,12 @@ body, html {
   background-color:rgb(242, 232, 238);
 }
 
-.pixelScroller {
-  margin-top: 24px;
-  font-weight: bold;
-  font-size: 24px;
-  font-family: Arial;
+:root {
+  --heightAndWidth: 8;
 }
 
-.slideContainer {
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-
-.slider {
-  -webkit-appearance: none;
-  width: 400px;
-  height: 5px;
-  border-radius: 5px;  
-  background: #7a6969;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slideContainer .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 30px;
-  background-color: #CD0707;
+.mainButtons {
+  margin-bottom: 16px;
 }
 
 .center {
@@ -47,40 +26,41 @@ body, html {
   border-color: rgb(205, 7, 7);
   box-shadow: 1px 1px 2px 2px #333;
   border-radius: 10px;
-  border-width: 48px;
+  border-width: 68px;
 }
 
 .containerInside {
   border-radius: 23px;
   background-color: rgb(210, 210, 210);
   display: grid;
-  grid-template-columns: repeat(16, 3fr);
-  grid-template-rows: repeat(16, 1fr);
+  padding: 8px;
+  grid-template-columns: repeat(var(--heightAndWidth), 1fr);
+  grid-template-rows: repeat(var(--heightAndWidth), 1fr);
 }
 
 @media only screen and (max-width: 800px) {
  .resizeOutside {
-    height: 200px;
+    height: 300px;
     width: 300px;
  }
  .resizeInside {
-    height: 211px;
+    height: 311px;
     width: 317px;
-    margin-top: -6px;
-    margin-left: -9px;
+    margin-top: -5px;
+    margin-left: -15px;
  }
 }
 
 @media only screen and (min-width: 800px) {
   .resizeOutside {
-    height: 400px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
   }
   .resizeInside {
-    height: 411px;
-    width: 617px;
-    margin-top: -6px;
-    margin-left: -9px;
+    height: 511px;
+    width: 517px;
+    margin-top: -5px;
+    margin-left: -15px;
   }
 }
 
@@ -96,7 +76,7 @@ body, html {
 
 .circleRight {
   position: absolute;
-  bottom: -50px;
+  bottom: -70px;
   right: -40px;
   box-shadow: 2px 2px 2px rgb(0 0 0);
   background: rgb(211, 211, 211);
@@ -107,7 +87,7 @@ body, html {
 
 .circleLeft {
   position: absolute;
-  bottom: -50px;
+  bottom: -70px;
   left: -40px;
   box-shadow: 2px 2px 2px rgb(0 0 0);
   background: rgb(211, 211, 211);
@@ -129,8 +109,37 @@ body, html {
   border: none;
 }
 
-.squares {
+.square {
   width: 100%;
   height: 100%;
-  background: blue;
+  background-color: rgb(210, 210, 210);
+}
+
+.pixelSlider {
+  margin-top: 64px;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: Arial;
+}
+
+.slideContainer {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;  
+  background: #7a6969;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slideContainer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 30px;
+  background-color: #CD0707;
 }
