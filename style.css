@@ -137,7 +137,7 @@ body, html {
 }
 
 .pixelSlider {
-  margin-top: 64px;
+  margin-top: 36px;
   font-weight: bold;
   font-size: 24px;
   font-family: Arial;
@@ -145,7 +145,7 @@ body, html {
 
 .slideContainer {
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 
 .slider {
@@ -167,9 +167,10 @@ body, html {
 
 footer {
   font-family: sans-serif;
-  margin-top: 62px;
-  width: 100%;
-  overflow: hidden;
+  position: absolute;
+  width: 99%;
+  bottom: 0;
+  height: 2.5rem;
 }
 
 .icon {
